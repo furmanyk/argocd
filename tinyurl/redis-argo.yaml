@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/furmanyk/argocd
     targetRevision: HEAD
-    path: tinyurl/deployment
+    path: tinyurl/deployment/redis
   destination: 
     server: https://kubernetes.default.svc
     namespace: default
