@@ -1,0 +1,4 @@
+# creation rules are evaluated sequentially, the first match wins
+creation_rules:
+    - pgp: >-
+        59BF4832B84ED3D817D4B84ECE82D61D3581421F
