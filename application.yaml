@@ -10,10 +10,13 @@ spec:
     repoURL: https://github.com/furmanyk/argocd
     targetRevision: HEAD
     path: mychart
-#    helm:
-#      releaseName: mychart
-#      valueFiles:
-#        - "secrets/secrets.password.yaml"
+    plugin:
+      name: helmSecrets
+      env:
+        - name: HELM_OPTS
+          value: "secrets/secrets.password.yaml"
+        - name: RELEASE_NAME
+          value: "mychart"
   destination: 
     server: https://kubernetes.default.svc
     namespace: myapp
